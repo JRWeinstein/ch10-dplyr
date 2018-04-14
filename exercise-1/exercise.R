@@ -1,28 +1,28 @@
 # Exercise 1: working with data frames (review)
 
 # Install devtools package: allows installations from GitHub
-install.packages("devtools")
+#install.packages("devtools")
 
 # Install "fueleconomy" dataset from GitHub
-devtools::install_github("hadley/fueleconomy")
+#devtools::install_github("hadley/fueleconomy")
 
 # Use the `libary()` function to load the "fueleconomy" package
-library(fueleconomy)
+#library(fueleconomy)
 
 # You should now have access to the `vehicles` data frame
 # You can use `View()` to inspect it
-
+#View(vehicles)
 
 # Select the different manufacturers (makes) of the cars in this data set. 
 # Save this vector in a variable
-
+manufacturers <- vehicles$make
 
 # Use the `unique()` function to determine how many different car manufacturers
 # are represented by the data set
-
+unique_makes <- unique(manufacturers)
 
 # Filter the data set for vehicles manufactured in 1997
-
+made_1997 <- subset(vehicles, vehicles$year == "1997")
 
 # Arrange the 1997 cars by highway (`hwy`) gas milage
 # Hint: use the `order()` function to get a vector of indices in order by value
