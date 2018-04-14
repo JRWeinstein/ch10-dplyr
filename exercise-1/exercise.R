@@ -28,7 +28,7 @@ made_1997 <- subset(vehicles, vehicles$year == "1997")
 # Hint: use the `order()` function to get a vector of indices in order by value
 # See also:
 # https://www.r-bloggers.com/r-sorting-a-data-frame-by-the-contents-of-a-column/
-
+highway <- vehicles$hwy[order(vehicles$hwy, decreasing = TRUE)]
 
 # Mutate the 1997 cars data frame to add a column `average` that has the average
 # gas milage (between city and highway mpg) for each car
